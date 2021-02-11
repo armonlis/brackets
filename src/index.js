@@ -1,3 +1,5 @@
 module.exports = function check(str, bracketsConfig) {
-  // your solution
+  bracketsConfig.forEach(val => {while (str.includes(val.join(''))) {
+                                 str = str.replace(val.join(''), '')}});
+  return str.length ? false : true;
 }
